@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="body-black">
+
+    <nav class="sidebar">
+        <a href="index.html" class="sidebar-item active">
+          <i class="fa fa-home icon"></i>
+          <p>Strona Główna</p>
+        </a>
+        <a href="omnie.html" class="sidebar-item">
+          <i class="fa fa-user icon"></i>
+          <p>O Mnie</p>
+        </a>
+        <a href="projekty.html" class="sidebar-item">
+          <i class="fa fa-eye icon"></i>
+          <p>Projekty</p>
+        </a>
+        <a href="kontakt.html" class="sidebar-item">
+          <i class="fa fa-envelope icon"></i>
+          <p>Kontakt</p>
+        </a>
+    </nav>
+
+  <main id="main-content">
+    <header class="header">
+      <h1 class="header-title"><span class="hide-small">I'm</span> Antoni Nowak.</h1>
+      <p class="header-subtitle">Programista oraz gracz.</p>
+      <img src="../strona/zdjecie.jpg" alt="John Doe" class="header-image">
+    </header>
+  </main>
+
+  <footer class="footer">
+    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">© 2024 | Antoni Nowak</a></p>
+  </footer>
+  <div id="cookie-notice" class="cookie-notice">
+    <p>Nasza strona używa plików cookies. Kontynuując, zgadzasz się na ich używanie. <a href="#">Dowiedz się więcej</a>.</p>
+    <button id="cookie-accept" class="cookie-button">Akceptuję</button>
+  </div>
+  <script>
+    window.addEventListener('load', function() {
+      const cookieNotice = document.getElementById('cookie-notice');
+      const cookieAccept = document.getElementById('cookie-accept');
+  
+      if (!localStorage.getItem('cookiesAccepted')) {
+        cookieNotice.style.display = 'flex';
+      }
+  
+      cookieAccept.addEventListener('click', function() {
+        cookieNotice.style.display = 'none';
+        localStorage.setItem('cookiesAccepted', 'true');
+      });
+    });
+  </script>
+</body>
+</html>
